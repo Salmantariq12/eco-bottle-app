@@ -1,22 +1,76 @@
-# Eco-Friendly Water Bottle E-Commerce Platform
+# 🌿 Eco-Bottle E-Commerce Platform
 
-A production-ready, scalable e-commerce platform for eco-friendly water bottles built with Next.js, Node.js, MongoDB, Redis, and Docker.
+A production-ready, high-traffic e-commerce landing page for eco-friendly water bottles with advanced features including parallax scrolling, A/B testing, JWT authentication, Redis caching, and MongoDB Atlas integration.
 
-## 🚀 Quick Start
+## ✨ Features
 
+### Frontend
+- ✅ Interactive hero section with parallax scrolling
+- ✅ Dynamic form with real-time validation (Yup + React Hook Form)
+- ✅ A/B testable headlines (query param toggling)
+- ✅ Framer Motion animations throughout
+- ✅ Server-Side Rendering (SSR) for product listings
+- ✅ Responsive design with Tailwind CSS
+- ✅ CDN integration with Cloudinary/Unsplash
+- ✅ Error boundaries for graceful error handling
+- ✅ TypeScript support configured
+
+### Backend
+- ✅ JWT authentication (access + refresh tokens)
+- ✅ CRUD endpoints for products
+- ✅ Rate limiting with Redis
+- ✅ Redis caching with ETag support
+- ✅ MongoDB Atlas integration
+- ✅ Prometheus metrics
+- ✅ Winston logging
+- ✅ Comprehensive error handling
+- ✅ CORS & Helmet security
+
+### Infrastructure
+- ✅ NGINX load balancer
+- ✅ Docker Compose setup
+- ✅ Redis for caching & rate limiting
+- ✅ MongoDB Atlas cloud database
+- ✅ Prometheus monitoring
+
+## 🚀 Quick Start (Local Development)
+
+### Prerequisites
+- Node.js 18+ installed
+- MongoDB Atlas account (already configured)
+
+### 1. Run the Application
+
+**Option A: Using the startup script (Recommended)**
 ```bash
-# Clone the repository
-git clone <repository-url>
-cd eco-bottle-app
+# Windows
+start.bat
 
-# Start all services with Docker Compose
-docker-compose up --build
-
-# Application will be available at:
-# - Frontend: http://localhost:3000
-# - API: http://localhost/api/v1
-# - Metrics: http://localhost:9090
+# Linux/Mac
+./start.sh
 ```
+
+**Option B: Manual start**
+```bash
+# Terminal 1 - Backend
+cd backend
+npm run dev
+
+# Terminal 2 - Frontend
+cd frontend
+npm run dev
+```
+
+### 2. Access the Application
+- **Frontend**: http://localhost:3000
+- **Backend API**: http://localhost:4000
+- **API Docs**: http://localhost:4000/api/v1
+
+### 3. Test Features
+- **A/B Testing**: Visit `/?headline=variantA` or `/?headline=variantB`
+- **Seed Products**: Click "Add Sample Products" button on homepage
+- **Register/Login**: Use navigation menu
+- **Place Order**: Click on any product card
 
 ## 🏗️ Architecture Overview
 

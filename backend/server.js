@@ -13,7 +13,7 @@ const apiRoutes = require('./src/routes/api');
 const { apiLimiter } = require('./src/middleware/rateLimit.middleware');
 
 const PORT = process.env.PORT || 4000;
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://mongo:27017/eco_bottle';
+const MONGO_URI = process.env.MONGODB_URI || process.env.MONGO_URI || 'mongodb://mongo:27017/eco_bottle';
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const USE_CLUSTER = process.env.NODE_CLUSTER === 'true';
 
