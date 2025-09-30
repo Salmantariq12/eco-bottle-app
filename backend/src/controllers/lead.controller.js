@@ -22,7 +22,7 @@ const checkHighLoad = () => {
 const createLead = async (req, res) => {
   const startTime = Date.now();
 
-  if (checkHighLoad()) {
+  if (process.env.NODE_ENV !== 'development' && checkHighLoad()) {
     logger.warn('System under high load, returning 503', {
       ip: req.ip,
       path: req.path
